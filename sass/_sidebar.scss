@@ -3,6 +3,11 @@
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
   text-align: center;
+
+  @media only screen and (max-width: $bp-large) {
+    text-align: right;
+    grid-row: 1 / 2;
+  }
 }
 
 .nav-btn {
@@ -24,10 +29,15 @@
   }
 
   &::before {
-    transform: translateY(-1.7rem);
+    transform: translateY(-1.4rem);
   }
 
   &::after {
-    transform: translateY(1.5rem);
+    transform: translateY(1.1rem);
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    margin-right: 3rem;
+    margin-top: 2.8rem;
   }
 }

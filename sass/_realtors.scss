@@ -9,18 +9,42 @@
   row-gap: 2rem;
   justify-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     column-gap: 2rem;
     row-gap: 5vh;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
     width: 7rem;
     display: block;
     border-radius: 50%;
+
+    @media only screen and (max-width: $bp-medium) {
+      &:not(:first-child) {
+        margin-left: 2.5rem;
+      }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+    }
   }
 
   &__sold {

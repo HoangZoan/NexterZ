@@ -14,11 +14,21 @@
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
 
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start / full-end;
+      padding: 6rem;
+    }
+
     &--1 {
       width: 100%;
       grid-column: 2 / span 4;
       grid-row: 2 / span 4;
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+      @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / span 5;
+        grid-row: 1 / -1;
+      }
     }
 
     &--2 {
@@ -28,6 +38,12 @@
       position: relative;
       z-index: 10;
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+
+      @media only screen and (max-width: $bp-medium) {
+        grid-column: 4 / -1;
+        grid-row: 2 / span 3;
+        width: 100%;
+      }
     }
   }
 
@@ -40,6 +56,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start / full-end;
+      grid-row: 5 / 6;
+    }
   }
 
   &__text {
